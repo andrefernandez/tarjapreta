@@ -156,6 +156,7 @@ Aqui artistas, clientes e tinta se misturam até se confundirem entre si - tudo 
 
                     <div class="list">
                       {{#each artists}}
+                      {{#ifCond tattooArtist.data.id }}
                       <div class="list__item">
                         <div class="">
                           <div class="images">
@@ -181,6 +182,7 @@ Aqui artistas, clientes e tinta se misturam até se confundirem entre si - tudo 
                           </div>
                         </div>
                       </div>
+                      {{/ifCond}}
                       {{/each}}
                     </div>
                   </div>
@@ -318,6 +320,8 @@ Aqui artistas, clientes e tinta se misturam até se confundirem entre si - tudo 
         speed: 450
       });
     });
+
+    
 
     $('[data-toggle="modal"]').on("click", function (e) {
       const $target = $(e.target);
