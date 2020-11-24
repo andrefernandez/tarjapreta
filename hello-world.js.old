@@ -1,0 +1,38 @@
+const express = require("express");
+const path = require("path");
+const axios = require("axios");
+const exphbs = require("express-handlebars");
+
+const app = express();
+
+const hbs = exphbs.create({
+  // Specify helpers which are only registered on this instance.
+  helpers: {
+    json: function(context) {
+      return JSON.stringify(context);
+    }
+  }
+});
+
+app.engine("handlebars", hbs.engine);
+app.set("view engine", "handlebars");
+app.set("views", path.resolve(__dirname, "views"));
+app.use("/static", express.static("static"));
+
+app.get("/", async (req, res) => {
+  const { data } = await axios.get("https://api.donttouch.com.br/timeslot");
+  const rows = data.data.length / 3;
+  res.render("index", {
+    artists: data.data,
+    rows: Array.from({ length: rows }, (k, v) => v + 1),
+    helpers: {
+      json: function(context) {
+        return JSON.stringify(context);
+      }
+    }
+  });
+});
+
+app.listen(17337, () => {
+  console.log("app listening on port 17337");
+});

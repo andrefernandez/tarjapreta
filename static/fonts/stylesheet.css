@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'BlockBE';
+    src: url('BlockBEExtraCnIt.eot');
+    src: url('BlockBEExtraCnIt.eot?#iefix') format('embedded-opentype'),
+        url('BlockBEExtraCnIt.woff2') format('woff2'),
+        url('BlockBEExtraCnIt.woff') format('woff'),
+        url('BlockBEExtraCnIt.ttf') format('truetype'),
+        url('BlockBEExtraCnIt.svg#BlockBEExtraCnIt') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'BlockBE';
+    src: url('BlockBEHeavy.eot');
+    src: url('BlockBEHeavy.eot?#iefix') format('embedded-opentype'),
+        url('BlockBEHeavy.woff2') format('woff2'),
+        url('BlockBEHeavy.woff') format('woff'),
+        url('BlockBEHeavy.ttf') format('truetype'),
+        url('BlockBEHeavy.svg#BlockBEHeavy') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Block Berthold';
+    src: url('BlockBE-Heavy.eot');
+    src: url('BlockBE-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('BlockBE-Heavy.woff2') format('woff2'),
+        url('BlockBE-Heavy.woff') format('woff'),
+        url('BlockBE-Heavy.ttf') format('truetype'),
+        url('BlockBE-Heavy.svg#BlockBE-Heavy') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BlockBE';
+    src: url('BlockBECondensed.eot');
+    src: url('BlockBECondensed.eot?#iefix') format('embedded-opentype'),
+        url('BlockBECondensed.woff2') format('woff2'),
+        url('BlockBECondensed.woff') format('woff'),
+        url('BlockBECondensed.ttf') format('truetype'),
+        url('BlockBECondensed.svg#BlockBECondensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BlockBE';
+    src: url('BlockBEItalic.eot');
+    src: url('BlockBEItalic.eot?#iefix') format('embedded-opentype'),
+        url('BlockBEItalic.woff2') format('woff2'),
+        url('BlockBEItalic.woff') format('woff'),
+        url('BlockBEItalic.ttf') format('truetype'),
+        url('BlockBEItalic.svg#BlockBEItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'BlockBE';
+    src: url('BlockBEExtraCn.eot');
+    src: url('BlockBEExtraCn.eot?#iefix') format('embedded-opentype'),
+        url('BlockBEExtraCn.woff2') format('woff2'),
+        url('BlockBEExtraCn.woff') format('woff'),
+        url('BlockBEExtraCn.ttf') format('truetype'),
+        url('BlockBEExtraCn.svg#BlockBEExtraCn') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
