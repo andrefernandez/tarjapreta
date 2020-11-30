@@ -41,7 +41,6 @@ app.set("views", path.resolve(__dirname, "views"));
 app.use("/static", express.static(__dirname + "/static"));
 
 hbs.handlebars.registerHelper('ifCond', function (v1, options) {
-  console.log(v1);
     if( v1 == 346 || v1 == 350 || v1 == 192 || v1 == 352){
       return options.fn(this);
     }else{
