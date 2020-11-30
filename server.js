@@ -76,6 +76,6 @@ app.get("/:slug", async (req, res) => {
   });
 });
 
-app.listen(8000, () => {
+app.listen(17337, () => {
   console.log("Boa porra! Lança no browser ai localhost:8000");
 });
