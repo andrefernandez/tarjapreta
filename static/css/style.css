@@ -33,7 +33,7 @@ label {
 
 body {
   font-family: "BlockBertholdRegular";
-  background: #121212;
+  background: #000000;
 }
 
 .btn-success {
@@ -173,9 +173,6 @@ section {
 
 /* Header Style */
 
-#header {
-}
-
 #header .navbar-default .navbar-nav li {
   width: 100%;
   display: inline-block;
@@ -207,29 +204,27 @@ section {
 }
 
 /* Banner Style */
-#banner {
-}
 
 #banner h2 {
-  color: #e2e2e2;
+  color: #ffffff;
   font-size: 130px;
   /*font-family: "BlockBertholdRegular";*/
-  font-family: 'Bowlby One SC', cursive;
   line-height: 0.9;
   text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
 }
 
 #banner h3 {
-  color: #e2e2e2;
+  color: #ffffff;
   font-size: 90px;
-  font-family: 'Roboto', sans-serif;
   line-height: 0.9;
   text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
 }
 
 /* Content Style */
-#content {
-}
 
 #content .title {
   float: left;
@@ -326,12 +321,7 @@ section {
   /*background: url(../img/down-arrow.png) 0px 36% no-repeat;*/
 }
 
-.panel-group .panel-title a.collapsed {
-  /*background: url(../img/up-arrow.png) 0px 36% no-repeat;*/
-}
 
-.panel-group .panel-title a {
-}
 
 .panel-default > .panel-heading {
   background: none;
@@ -569,9 +559,7 @@ form button {
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
-  .navbar-default .navbar-brand img {
-  }
-
+  
   .navbar-default .navbar-toggle {
     margin-top: 10px;
     margin-right: 0px;
@@ -627,9 +615,6 @@ form button {
     padding-right: 0px;
   }
 
-  #content .title h6 {
-    /*padding-left: 20px;*/
-  }
 
   #footer ul {
     margin-top: 25px;
@@ -643,7 +628,7 @@ form button {
   #content .title h6 {
     padding-left: 20px;
   }
-}
+
 
 /* Landscape tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1169px) {
