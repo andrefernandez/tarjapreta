@@ -22,7 +22,6 @@ function shuffle(array) {
   return array;
 }
 
-
 const app = express();
 
 const hbs = exphbs.create({
@@ -33,7 +32,6 @@ const hbs = exphbs.create({
     }
   }
 });
-
 
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
