@@ -15,6 +15,33 @@
   <link type="text/css" rel="stylesheet" href="/static/css/font-awesome.css" />
   <link type="text/css" rel="stylesheet" href="/static/css/jquery.bxslider.css" />
   <link href="/static/css/style.css" rel="stylesheet" />
+
+  [15:27, 03/12/2020] Matheus - Calina: <!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '213112989878853');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=213112989878853&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+[15:28, 03/12/2020] Matheus - Calina: <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-146902842-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-146902842-1');
+</script>
 </head>
 
 <body>
@@ -30,7 +57,7 @@
         <div class="col-lg-4 text-center col-xs-4 col-sm-4">
           <img class="m-top" src="/static/img/img-1.png" alt="" />
         </div>
-        <div class="col-lg-4 text-right col-xs-4 col-sm-4">
+        {{!-- <div class="col-lg-4 text-right col-xs-4 col-sm-4">
           <nav class="navbar navbar-default navbar-static-top" role="navigation">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-1"
@@ -51,9 +78,9 @@
               </div>
             </div>
           </nav>
-        </div>
+        </div> 
       </div>
-      <div class="row visible-xs">
+       <div class="row visible-xs">
         <div class="col-lg-12 col-sm-12 col-xs-12">
           <div id="navbar-1" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -63,7 +90,7 @@
             </ul>
           </div>
         </div>
-      </div>
+      </div> --}}
     </div>
   </section>
   <!---- Header End ---->
@@ -307,7 +334,7 @@ Não vendemos um produto... proporcionamos uma experiência!</p>
       "https://api.whatsapp.com/send?phone=5511995092925"];
       var _sortNumber = Math.round(Math.random()* _numbers.length-1);
 
-     //$("#wpp").attr("href", "https://api.whatsapp.com/send?phone=5511966551515"]);
+     {{!-- //$("#wpp").attr("href", "https://api.whatsapp.com/send?phone=5511966551515"]); --}}
 
       const pathname = window.location.pathname.split('/').pop();
       $(`[data-slug="${pathname}"]`).click();
@@ -417,7 +444,7 @@ Não vendemos um produto... proporcionamos uma experiência!</p>
       }
       $('.modal-artist-name').text(name)
       //$('.instagram-link').attr('href', 'instagram')
-      $('.instagram-link').attr('href', 'https://www.instagram.com/studiodonttouch/')
+      $('.instagram-link').attr('href', 'https://www.instagram.com/estudiotarjapreta/')
       //$('.instagram-username').text(instagram.split('/')[3])
       $('.instagram-username').text('Instagram')
       $('.modal-about').text(about);
