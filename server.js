@@ -48,8 +48,12 @@ hbs.handlebars.registerHelper('ifCond', function (v1, options) {
 
 app.get("/", async (req, res) => {
   const date = new Date();
-  const { data } = await axios.get(`https://api.donttouch.com.br/timeslot?month=${date.getMonth() + 1}&year=${date.getFullYear()}`);
+  const { data } = await axios.get(`https://donttouch-admin.herokuapp.com/api/tattooartist/Tarja Preta`);
   const rows = data.data.length / 3;
+
+  console.log('data.data: ', data.data);
+
+
   res.render("index", {
     artists: shuffle(data.data),
     rows: Array.from({ length: rows }, (k, v) => v + 1),
@@ -63,7 +67,7 @@ app.get("/", async (req, res) => {
 
 app.get("/:slug", async (req, res) => {
   const date = new Date();
-  const { data } = await axios.get(`https://api.donttouch.com.br/timeslot?month=${date.getMonth() + 1}&year=${date.getFullYear()}`);
+  const { data } = await axios.get(`https://donttouch-admin.herokuapp.com/api/tattooartist/Tarja Preta`);
   const rows = data.data.length / 3;
   res.render("index", {
     artists: data.data,

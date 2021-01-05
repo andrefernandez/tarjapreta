@@ -146,7 +146,7 @@ Não vendemos um produto... proporcionamos uma experiência!</p>
                         <p><i class="fa fa-map-marker" aria-hidden="true"></i><br><br>Av. Moema, 606
                           - Planalto Paulista,<br>São Paulo - SP,<br>04077-022, Brazil<br>
                           
-                          <a href="mailto:contato@tarjapreta.com.br" target="_blank">contato@tarjapreta.com.br</a>
+                          <a href="mailto:contato@tarjapreta.com.br" target="_blank">contato@estudiotarjapreta.com.br</a>
                           </p>
                       </div>
                     </div>
@@ -194,21 +194,20 @@ Não vendemos um produto... proporcionamos uma experiência!</p>
 
                     <div class="list">
                       {{#each artists}}
-                      {{#ifCond tattooArtist.data.id }}
                       <div class="list__item">
                         <div class="">
                           <div class="images">
                             <a class="in" href="" data-toggle="modal" data-target=".bs-example-modal-lg"
-                              data-id="{{tattooArtist.data.id}}" data-name="{{tattooArtist.data.name}}"
-                              data-social="{{tattooArtist.data.instragram}}"
-                              data-about="{{tattooArtist.data.introduce_yourself}}"
-                              data-gallery="{{json tattooArtist.data.gallery}}" data-slug="{{tattooArtist.data.slug}}"
-                              data-whatsapp="{{tattooArtist.data.salesRepresentative.data.cellphone}}">
-                              <img src="{{gallery.data.[0].image}}" alt="" />
+                              data-id="{{_id}}" data-name="{{name}}"
+                              data-social="{{instagram}}"
+                              data-about="{{description}}"
+                              data-gallery="{{json gallery}}" data-slug="{{slug}}"
+                              data-whatsapp="{{salesman.cellphone}}">
+                              <img src="{{featured_image.path}}" alt="" />
                               <div class="overlay text-right">
                                 <div class="tableRow">
                                   <div class="tableCell">
-                                    <h4>{{tattooArtist.data.name}}</h4>
+                                    <h4>{{name}}</h4>
                                     <button class="btn-info">Agendar</button>
                                   </div>
                                 </div>
@@ -216,11 +215,10 @@ Não vendemos um produto... proporcionamos uma experiência!</p>
                             </a>
                           </div>
                           <div class="col-lg-12 col-sm-12 flush col-xs-12">
-                            <h5 class="text-right">{{tattooArtist.data.instagram}}</h5>
+                            <h5 class="text-right">{{instagram}}</h5>
                           </div>
                         </div>
                       </div>
-                      {{/ifCond}}
                       {{/each}}
                     </div>
                   </div>
@@ -366,7 +364,7 @@ Não vendemos um produto... proporcionamos uma experiência!</p>
       const name = $(this).data('name');
       const instagram = $(this).data('social');
       const about = $(this).data('about');
-      const gallery = $(this).data('gallery');
+      const gallery = $(this).data('gallery').path;
       const id = $(this).data('id');
       const slug = $(this).data('slug');
       const whatsapp = $(this).data('whatsapp');
@@ -387,22 +385,23 @@ Não vendemos um produto... proporcionamos uma experiência!</p>
 
       history.pushState(
         {},
-        `${name} | Dounttouch.com.br`,
+        `${name} | estudiotarjapreta.com.br`,
         `/${slug}`
       );
 
       let template = "";
+            
 
-      for (i = 0; i < gallery.data.length; i++) {
+      for (i = 0; i < gallery.length; i++) {
         if (i === 0) {
           template += `
           <div class="details">
                  <div class="row-eq-height">
                    <div class="col-lg-6  col-sm-6 col-xs-12">
-                     <img src="${gallery.data[0].image}" alt="" />
+                     <img src="${gallery[0]}" alt="" />
                    </div>
                    <div class="col-lg-6 p-top col-sm-6 col-xs-12">
-                     <img src="${gallery.data[1].image}" alt="" />
+                     <img src="${gallery[1]}" alt="" />
                    </div>
                  </div>
                </div>`;
@@ -413,10 +412,10 @@ Não vendemos um produto... proporcionamos uma experiência!</p>
           <div class="details">
                  <div class="row-eq-height">
                    <div class="col-lg-6  col-sm-6 col-xs-12">
-                     <img src="${gallery.data[2].image}" alt="" />
+                     <img src="${gallery[2]}" alt="" />
                    </div>
                    <div class="col-lg-6 p-top col-sm-6 col-xs-12">
-                     <img src="${gallery.data[3].image}" alt="" />
+                     <img src="${gallery[3]}" alt="" />
                    </div>
                  </div>
                </div>`;
@@ -427,10 +426,10 @@ Não vendemos um produto... proporcionamos uma experiência!</p>
           <div class="details">
                  <div class="row-eq-height">
                    <div class="col-lg-6  col-sm-6 col-xs-12">
-                     <img src="${gallery.data[4].image}" alt="" />
+                     <img src="${gallery[4]}" alt="" />
                    </div>
                    <div class="col-lg-6 p-top col-sm-6 col-xs-12">
-                     <img src="${gallery.data[5].image}" alt="" />
+                     <img src="${gallery[5]}" alt="" />
                    </div>
                  </div>
                </div>`;
@@ -441,10 +440,10 @@ Não vendemos um produto... proporcionamos uma experiência!</p>
           <div class="details">
                  <div class="row-eq-height">
                    <div class="col-lg-6  col-sm-6 col-xs-12">
-                     <img src="${gallery.data[6].image}" alt="" />
+                     <img src="${gallery[6]}" alt="" />
                    </div>
                    <div class="col-lg-6 p-top col-sm-6 col-xs-12">
-                     <img src="${gallery.data[7].image}" alt="" />
+                     <img src="${gallery[7]}" alt="" />
                    </div>
                  </div>
                </div>`;
