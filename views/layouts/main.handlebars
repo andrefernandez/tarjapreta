@@ -464,16 +464,15 @@ Não vendemos um produto... proporcionamos uma experiência!</p>
 
         $.ajax({
           type: 'POST',
-          url: 'https://api.donttouch.com.br/scheduling',
+          url: 'https://donttouch-admin.herokuapp.com/api/quotation',
           data: {
-            customer_name: $('.field-name').val(),
-            customer_email: $('.field-email').val(),
-            customer_cellphone: $('.field-telephone').val(),
-            tattoo_width_cm: 10,
-            tattoo_height_cm: 10,
-            body_part: 'undefined',
-            tattoo_artist_id: id
+            name: $('.field-name').val(),
+            email: $('.field-email').val(),
+            cellphone: $('.field-telephone').val(),
+            store: '5ffe1d72a261910015a39bae', 
+            tattooArtist: id
           },
+          
           success: function (response) {
             Swal.fire({
               title: 'Sucesso!',
