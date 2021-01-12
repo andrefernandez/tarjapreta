@@ -455,7 +455,10 @@ Não vendemos um produto... proporcionamos uma experiência!</p>
         `https://api.whatsapp.com/send?phone=55${whatsapp.replace(/\D/g, '')}`)
       $('.modal-gallery').html(template)
   
-  
+      $('.whatsapp').click(function(){
+          fbq('track', 'Contact');
+      });
+
       $('.contact-form').off('submit').on('submit', (e) => {
         e.preventDefault();
 
@@ -478,6 +481,8 @@ Não vendemos um produto... proporcionamos uma experiência!</p>
               type: 'success',
               confirmButtonText: 'Ok'
             });
+
+            fbq('track', 'Lead');
             
             history.replaceState(null, null, 'obrigado');
             //$(input[type="submit"]).css{ 'display', ' none'}; 
