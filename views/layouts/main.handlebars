@@ -453,7 +453,7 @@ Não vendemos um produto... proporcionamos uma experiência!</p>
       $('.whatsapp').html(`<i class="fa fa-whatsapp" aria-hidden="true"></i> ${whatsapp}`)
       $('.whatsapp').attr(
         'href',
-        `https://api.whatsapp.com/send?phone=55${whatsapp.replace(/\D/g, '')}`)
+        `https://api.whatsapp.com/send?phone=${whatsapp.replace(/\D/g, '')}`)
       $('.modal-gallery').html(template)
   
       $('.whatsapp').click(function(){
