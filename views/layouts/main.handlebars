@@ -466,6 +466,7 @@ Não vendemos um produto... proporcionamos uma experiência!</p>
         $.ajax({
           type: 'POST',
           url: 'https://donttouch-admin.herokuapp.com/api/quotation',
+          dataType : 'json',
           data: {
             name: $('.field-name').val(),
             email: $('.field-email').val(),
