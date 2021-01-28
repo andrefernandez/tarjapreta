@@ -209,9 +209,9 @@ Não vendemos um produto... proporcionamos uma experiência!</p>
                               </div>
                             </a>
                           </div>
-                          <div class="col-lg-12 col-sm-12 flush col-xs-12">
+                          {{!-- <div class="col-lg-12 col-sm-12 flush col-xs-12">
                             <h5 class="text-right">{{instagram}}</h5>
-                          </div>
+                          </div> --}}
                         </div>
                       </div>
                       {{/each}}
@@ -473,6 +473,9 @@ Não vendemos um produto... proporcionamos uma experiência!</p>
             cellphone: $('.field-telephone').val(),
             store: '5ffe1d72a261910015a39bae', 
             tattooArtist: id
+          },
+          error : function(response){
+            console.log('erro: ', response);
           },
           
           success: function (response) {
