@@ -351,7 +351,6 @@ Não vendemos um produto... proporcionamos uma experiência!</p>
         speed: 450
       });
     });
-
     
 
     $('[data-toggle="modal"]').on("click", function (e) {
@@ -466,14 +465,16 @@ Não vendemos um produto... proporcionamos uma experiência!</p>
         $.ajax({
           type: 'POST',
           url: 'https://donttouch-admin.herokuapp.com/api/quotation',
-          dataType : 'jsonp',
-          data: {
+          cors: false,
+          contentType: 'application/json',
+          dataType: 'json',
+          data: JSON.stringify({
             name: $('.field-name').val(),
             email: $('.field-email').val(),
             cellphone: $('.field-telephone').val(),
-            store: '5ffe1d72a261910015a39bae', 
+            store: '5ffe1d72a261910015a39bae',
             tattooArtist: id
-          },
+          }),
           error : function(response){
             console.log('erro: ', response);
           },
