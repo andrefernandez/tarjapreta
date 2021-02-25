@@ -489,7 +489,6 @@ Não vendemos um produto... proporcionamos uma experiência!</p>
   
       $('.whatsapp').click(function(){
           fbq('track', 'Contact');
-
       });
 
       $('.contact-form').off('submit').on('submit', (e) => {
@@ -513,14 +512,13 @@ Não vendemos um produto... proporcionamos uma experiência!</p>
           },
           
           success: function (response) {
+            fbq('track', 'Lead');
             Swal.fire({
               title: 'Sucesso!',
               text: 'Sua solicitação de orçamento foi enviada com sucesso.',
               type: 'success',
               confirmButtonText: 'Ok'
             });
-
-            fbq('track', 'Lead');
             
             history.replaceState(null, null, 'obrigado');
             //$(input[type="submit"]).css{ 'display', ' none'}; 
