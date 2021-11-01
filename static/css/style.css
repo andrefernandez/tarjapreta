@@ -556,13 +556,17 @@ form button {
 
 .whatsapp{
   text-transform: uppercase;
-  font-size: 17px;
-  font-family: 'font';
-  display: inline-block;
-  background: #128c7e;
-  border-radius: 4px;
-  padding: 8px 5px 1px 5px;
-  color: #ffffff;
+    font-size: 17px;
+    font-family: 'font';
+    display: inline-block;
+    background: #128c7e;
+    border-radius: 4px;
+    color: #ffffff;
+    display: block;
+    width: 250px;
+    line-height: 20px;
+    padding: 8px 10px 1px 10px;
+    text-align: center;
 }
 
 /*****======= Responsive Style Css ======***********/
