@@ -561,7 +561,7 @@ form button {
   display: inline-block;
   background: #128c7e;
   border-radius: 4px;
-  padding: 4px 14px 4px;
+  padding: 8px 5px 1px 5px;
   color: #ffffff;
 }
 
