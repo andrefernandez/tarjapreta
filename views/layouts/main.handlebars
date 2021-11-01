@@ -263,9 +263,7 @@ Não vendemos um produto... proporcionamos uma experiência!</p>
               </div>
               <div class="details">
                 <div class="col-lg-6 col-sm-6 col-xs-12">
-                  <p class="">Orçamentos</p>
-                  <a class="whatsapp" target="_blank"
-                    style="color: #128c7e; text-transform: uppercase; font-size: 20px; font-family: 'font'; display:inline-block;">WhatsApp:</a>
+                  <a class="whatsapp" href="https://api.whatsapp.com/send?phone=5511980513299&text=Gostaria%20de%20um%20or%C3%A7amento." target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i> Quero um orçamento</a>
                 </div>
               </div>
               <div class="modal-gallery">
@@ -436,11 +434,8 @@ Não vendemos um produto... proporcionamos uma experiência!</p>
       //$('.instagram-username').text(instagram.split('/')[3])
       $('.instagram-username').text('Instagram')
       $('.modal-about').text(about);
-      $('.whatsapp').html(`<i class="fa fa-whatsapp" aria-hidden="true"></i> ${whatsapp}`)
-      $('.whatsapp').attr(
-        'href',
-        `https://api.whatsapp.com/send?phone=${whatsapp.replace(/\D/g, '')}`)
-      $('.modal-gallery').html(template)
+     
+      $('.modal-gallery').html(template);
   
       $('.whatsapp').click(function(){
           fbq('track', 'Contact');

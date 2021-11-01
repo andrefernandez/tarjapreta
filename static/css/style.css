@@ -552,7 +552,17 @@ form button {
   bottom: 5px;
   right: 5px;
   background: url("../img/wpp-ico.png") no-repeat center;
+}
 
+.whatsapp{
+  text-transform: uppercase;
+  font-size: 17px;
+  font-family: 'font';
+  display: inline-block;
+  background: #128c7e;
+  border-radius: 4px;
+  padding: 4px 14px 4px;
+  color: #ffffff;
 }
 
 /*****======= Responsive Style Css ======***********/
