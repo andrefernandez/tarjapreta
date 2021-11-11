@@ -320,6 +320,11 @@ Não vendemos um produto... proporcionamos uma experiência!</p>
       "https://api.whatsapp.com/send?phone=5511995092925"];
       var _sortNumber = Math.round(Math.random()* _numbers.length-1);
 
+     $("#wpp").attr("href", "https://api.whatsapp.com/send?phone=+5511980513299&text=Gostaria%20de%20fazer%20um%20orçamento.");
+     $("#wpp").click(function(){
+        fbq('track', 'Contact');
+     });
+
       const pathname = window.location.pathname.split('/').pop();
       $(`[data-slug="${pathname}"]`).click();
   
@@ -438,11 +443,7 @@ Não vendemos um produto... proporcionamos uma experiência!</p>
       $('.whatsapp').click(function(){
           fbq('track', 'Contact');
       });
-
-      $('#wpp').click(function(){
-          fbq('track', 'Contact');
-      });
-
+      
       $('.contact-form').off('submit').on('submit', (e) => {
         e.preventDefault();
 
